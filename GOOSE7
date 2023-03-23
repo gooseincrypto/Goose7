@@ -1,0 +1,32 @@
+# Suppress warnings
+import warnings
+warnings.filterwarnings("ignore")
+
+def array_opp(arr):
+    # a. Create an array, specify the data type as int
+    import numpy as np
+    a = np.array(arr)
+    print(a, '\n')
+
+    #b. Access the first and last entry of the array
+    first = a[0,0]
+    print("first entry --->", first)
+
+    last = a[-1,-1]
+    print("last entry --->", last, '\n')
+
+    #c. Access the first row and the first column of the array
+    first_row= a[0,:]
+    print("first row --->", first_row)
+
+    first_col= a[:,0]
+    print("first column --->", first_col, '\n')
+
+    #d.  Find the mean and standard deviation of the second column. Round to 1 decimal place.
+    m= np.mean(a[:,1])
+    s= np.std(a[:,1])
+
+    print('mean --->',round(m,1) )
+    print('standard deviation --->',round(s,1))
+    
+   
